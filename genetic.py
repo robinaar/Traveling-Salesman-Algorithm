@@ -2,7 +2,7 @@ from utils import *
 from random import randint
 
 class Genetic:
-    def __init__(self, population=[], populationSize=0):
+    def __init__(self, population=[], populationSize=2000000):
         self.population = population
         self.size = populationSize
         self.fitness = [0 for i in range(populationSize)]
@@ -11,7 +11,7 @@ class Genetic:
         self.current = None
         self.fitest = []
         self.fitestIndex = 0
-        self.mutation_rate = 0.01
+        self.mutation_rate = 200.0
 
     def CalculateFitness(self, points):
         for i in range(self.size):
